@@ -12,4 +12,7 @@ spec = Gem::Specification.new do |s|
   s.license      = "MIT"
   s.required_ruby_version = ">= 1.9.3"
   s.add_development_dependency "rake"
+  if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    s.add_development_dependency(%q<test-unit-minitest>, [">= 0"])
+  end
 end
